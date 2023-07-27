@@ -30,6 +30,16 @@ class Solution:
     def isBalanced(self, parenthesis): 
             #type parenthesis: string
             #return type: boolean
+            # stack = []
+            # open = ['(', '[', '{']
+            # close = [')',']','}']
+            # matching = dict(zip(close, open))
+            # for c in parenthesis:
+            #     if c in open:
+            #         stack.append(c)
+            #     elif c in close:
+            #         if len(stack ) == 0:
+
             c1 = 0
             c2 = 0
             c3 = 0
@@ -42,20 +52,19 @@ class Solution:
                 elif i == '(':
                     c2 +=1
                 elif i == '{': 
-                    c3+=1
-       
-            for i in parenthesis:
-                if i == '}':
+                    c3 +=1
+                elif i == '}':
                     cc1 += 1
                 elif i == ')':
                     cc2 +=1
                 elif i == '}': 
                     cc3+=1
+            print(c1, cc1,c2,cc2,c3,cc3)
             if c1 == cc1 and c2 == cc2 and c3 == cc3:
                 return True
             else:
                 return False
-
+    isBalanced('{[()]}')
                      
             
             #TODO: Write code below to returnn a boolean value with the solution to the prompt.
