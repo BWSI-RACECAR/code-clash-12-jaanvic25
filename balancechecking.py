@@ -43,11 +43,11 @@ class Solution:
                          return False
                 if i == '(':
                     c2 +=1
-                    if not parenthesis.contains(')'):
+                    if not parenthesis.find(')'):
                         return False
                 if i == '{': 
                     c3+=1
-                    if not parenthesis.contains('}'):
+                    if not parenthesis.find('}'):
                          return False
             for i in parenthesis:
                 if i == '}':
