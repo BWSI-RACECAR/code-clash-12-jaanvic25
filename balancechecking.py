@@ -51,7 +51,7 @@ class Solution:
                     cc2 +=1
                 elif i == '}': 
                     cc3+=1
-            if c1 == cc1 and cc2 == cc2 and cc3 == cc3:
+            if c1 == cc1 and c2 == cc2 and c3 == cc3:
                 return True
             else:
                 return False
