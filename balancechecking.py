@@ -39,22 +39,17 @@ class Solution:
             for i in parenthesis:
                 if i == '[':
                     c1 += 1
-                    if not parenthesis.find(']'):
-                         return False
-                if i == '(':
+                elif i == '(':
                     c2 +=1
-                    if not parenthesis.find(')'):
-                        return False
-                if i == '{': 
+                elif i == '{': 
                     c3+=1
-                    if not parenthesis.find('}'):
-                         return False
+       
             for i in parenthesis:
                 if i == '}':
                     cc1 += 1
-                if i == ')':
+                elif i == ')':
                     cc2 +=1
-                if i == '}': 
+                elif i == '}': 
                     cc3+=1
             if c1 == cc1 and cc2 == cc2 and cc3 == cc3:
                 return True
