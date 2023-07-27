@@ -30,17 +30,36 @@ class Solution:
     def isBalanced(self, parenthesis): 
             #type parenthesis: string
             #return type: boolean
+            c1 = 0
+            c2 = 0
+            c3 = 0
+            cc1 = 0
+            cc2 = 0
+            cc3 = 0
             for i in parenthesis:
                 if i == '[':
+                    c1 += 1
                     if not parenthesis.find(']'):
                          return False
                 if i == '(':
-                    if not parenthesis.find(')'):
+                    c2 +=1
+                    if not parenthesis.contains(')'):
+                        return False
+                if i == '{': 
+                    c3+=1
+                    if not parenthesis.contains('}'):
                          return False
-                if i == '{':
-                    if not parenthesis.find('}'):
-                         return False
-            return True
+            for i in parenthesis:
+                if i == '}':
+                    cc1 += 1
+                if i == ')':
+                    cc2 +=1
+                if i == '}': 
+                    cc3+=1
+            if c1 == cc1 and cc2 == cc2 and cc3 == cc3:
+                return True
+            else:
+                return False
 
                      
             
