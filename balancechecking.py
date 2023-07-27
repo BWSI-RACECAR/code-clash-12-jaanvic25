@@ -64,7 +64,7 @@ class Solution:
                 return True
             else:
                 return False
-    isBalanced("{[()]}")
+    #isBalanced("{[()]}")
                      
             
             #TODO: Write code below to returnn a boolean value with the solution to the prompt.
