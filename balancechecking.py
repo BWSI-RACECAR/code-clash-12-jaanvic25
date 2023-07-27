@@ -32,13 +32,13 @@ class Solution:
             #return type: boolean
             for i in parenthesis:
                 if i == '[':
-                    if not parenthesis.contains(']'):
+                    if not parenthesis.find(']'):
                          return False
                 if i == '(':
-                    if not parenthesis.contains(')'):
+                    if not parenthesis.find(')'):
                          return False
                 if i == '{':
-                    if not parenthesis.contains('}'):
+                    if not parenthesis.find('}'):
                          return False
             return True
 
