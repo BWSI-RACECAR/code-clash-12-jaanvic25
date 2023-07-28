@@ -28,17 +28,6 @@ Input:{[{}]  Output: False
 """
 class Solution:
     def isBalanced(self, parenthesis): 
-            #type parenthesis: string
-            #return type: boolean
-            # stack = []
-            # open = ['(', '[', '{']
-            # close = [')',']','}']
-            # matching = dict(zip(close, open))
-            # for c in parenthesis:
-            #     if c in open:
-            #         stack.append(c)
-            #     elif c in close:
-            #         if len(stack ) == 0:
 
             c1 = 0
             c2 = 0
@@ -53,7 +42,7 @@ class Solution:
                     c2 +=1
                 elif i == '{': 
                     c3 +=1
-                elif i == '}':
+                elif i == ']':
                     cc1 += 1
                 elif i == ')':
                     cc2 +=1
@@ -64,7 +53,6 @@ class Solution:
                 return True
             else:
                 return False
-    #isBalanced("{[()]}")
                      
             
             #TODO: Write code below to returnn a boolean value with the solution to the prompt.
